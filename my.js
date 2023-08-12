@@ -104,14 +104,30 @@ $('.owl-carousel').owlCarousel({
   }
 })
 
+
+
 if(screen.width < 900){
    let makeArr = document.querySelector(".short").textContent.split(""); 
    console.log(makeArr.length)
    makeArr.length = 100  ;
    console.log(makeArr.length)
-    let make
+
    document.querySelector(".short").textContent = makeArr.join("")+ "  ........." ;
-   console.log(makeArr);
+   
 
  
 }
+
+
+// color switch 
+
+const checkbox = document.getElementById("checkbox")
+checkbox.addEventListener("change", () => {
+  document.body.classList.toggle("dark");
+  document.querySelector(".navbar ").classList.toggle("navbar-light");
+  document.querySelector(".navbar ").classList.toggle("navbar-dark");
+  document.querySelector(".navbar ").classList.toggle("bg-make");
+  
+
+  document.querySelector(".navbar ").classList.toggle("bg-light")
+})

@@ -7,14 +7,11 @@
 
 html{
   scroll-behavior: smooth;
- 
-  
-
 }
 
 *{
   font-family: 'Public Sans', sans-serif;
-  ;
+ 
 }
 
 /* brand icons  */
@@ -32,6 +29,8 @@ transition: 1s;
   
 /* background-color: rgba(255, 255, 0, 0.503); */
 }
+
+
 
 .service_icon{
 	font-size: 40px;
@@ -58,6 +57,7 @@ transition: 1s;
 	transform: scale(1.1);
 }
 
+
 .my_container{
   min-height: 100vh;
   padding-top: 40px;
@@ -65,59 +65,9 @@ transition: 1s;
 }
 
 .card{
+	margin: auto;
   width: 200px;
 }
-
-@media (min-width : 992px) {
-	.mailbg{
-		left: 60% !important;
-	}
-	.brand-icon{
-		padding: 10px;
-
-		font-size: 30px;
-	}
-  .img_container{
-    width: 300px;
-	height: 300px;
-  }
-
-  .card{
-    width: 300px;
-  }
-  .navbar{
-    width: 200px;
-    height: 100vh;
-  } 
-  .nav-item{
-    padding: 15px;
-  }
-  .social_links{
-    top: 50px;
-  }
-  .list-unstyled{
-    display: flex;
-  }
- 
-  
-  .img_container{
-    
-	height: 300px;
-  }
-  
-
-.my_container{
-  padding-left: 300px !important;
-  min-height: 100vh;
-  margin-top: 100px;
-  
-}
-}
-
-
-
-
-
 
 
 #about{
@@ -317,6 +267,10 @@ label {
 
 }
 
+.intro_text h1 {
+	height: 100px;
+}
+
 .typing {
 	animation: typing 2s steps(20, end);
 
@@ -456,7 +410,7 @@ label {
 
   /* myworks  */
   #myworks .card{
-	margin: auto;
+	/* margin: auto; */
   }
  
 
@@ -464,4 +418,162 @@ label {
   .short{
 	font-size: 20px;
 
+  }
+
+
+
+  /* day mod night mode switch  */
+
+  
+.checkbox {
+	opacity: 0;
+	position: absolute;
+  }
+  
+  .checkbox-label {
+	background-color: #111;
+	width: 50px;
+	height: 26px;
+	border-radius: 50px;
+	position: relative;
+	padding: 5px;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  
+  .fa-moon {color: #f1c40f;}
+  
+  .fa-sun {color: #f39c12;}
+  
+  .checkbox-label .ball {
+	background-color: #fff;
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	left: 2px;
+	top: 2px;
+	border-radius: 50%;
+	transition: transform 0.2s linear;
+  }
+  
+  .checkbox:checked + .checkbox-label .ball {
+	transform: translateX(24px);
+  }
+  
+  
+  
+  .theme{
+	position: fixed;
+top: 20px;
+left: 10px;
+
+	z-index: 999999999999999999999999999999999999999999;
+}
+
+
+  /* ---------for large device ------------ */
+  @media (min-width : 992px) {
+
+
+	.intro_text h1 {
+		
+	}
+
+
+	.mailbg{
+		left: 60% !important;
+	}
+	.brand-icon{
+		padding: 10px;
+
+		font-size: 30px;
+	}
+  .img_container{
+    width: 300px;
+	height: 300px;
+  }
+
+  .card{
+    width: 300px;
+  }
+  .navbar{
+    width: 200px;
+    height: 100vh;
+	
+  } 
+  .nav-item{
+    padding: 15px;
+  }
+  .social_links{
+    top: 50px;
+  }
+  .list-unstyled{
+    display: flex;
+  }
+ 
+  
+  .img_container{
+    
+	height: 300px;
+  }
+  
+
+.my_container{
+  padding-left: 300px !important;
+  min-height: 100vh;
+  margin-top: 100px;
+  
+}
+
+.theme{
+	top: 20px;
+	right: 20px;
+}
+}
+
+
+@media (min-width : 500px ) {
+	.my_container{
+		min-height: 60vh;
+	}
+}
+/* ---------for large device ------------ */
+
+
+
+/* day and night  */
+
+.dark{
+ background-color:rgb(2,42,48) !important;
+ color: #EEF3DB !important;
+
+}
+
+.dark li  , .dark .card ,.dark .mailbg{
+	color:rgb(2,42,48)  !important;
+}
+
+.dark .nav-item a{
+	color: #EEF3DB !important;
+
+}
+
+.bg-make{
+	background-color:rgb(2,42,48) !important;
+
+}
+
+/* specific property  */
+
+
+.cv_container button:hover{
+	animation: cssAnimation_0 410ms 1 linear;
+}
+
+@keyframes cssAnimation_0 {
+	to {
+	  transform: translate(0px, -49px);
+	}
   }
